@@ -17,12 +17,17 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <%= link_to 'SaaS', root_path, class: 'navbar-brand' %>
+      <%= link_to 'Site Name', root_path, class: 'navbar-brand' %>
+<!--       this is an erb tag, which requires a .erb extension -->
+<!--       this is converted to an achor tag by ruby -->
     </div>
   
     <div class="collapse navbar-collapse" id="main-nav-collapse">
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "About", "#" %></li>
+        <li><%= link_to "About", about_path %></li>
+<!--         this "about_path" method is referencing the route we created in routes.rb -->
+<!--         <li><%= link_to "About", "/about" %></li> -->
+<!--         this would be hard coding that link, it works, but it is bad practice -->
       </ul> 
     </div><!-- /.navbar-collapse -->
     
