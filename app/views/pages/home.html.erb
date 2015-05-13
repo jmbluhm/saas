@@ -1,3 +1,6 @@
+<!-- because we are using devise, we can use current_user -->
+<%= link_to "Create your profile", new_user_profile_path(current_user) if current_user git %>
+
 <div class='jumbotron text-center'>
   <h1>Welcome to the site!</h1>
   <h3>A membership site where entrepreneurs can meet developers</h3>
