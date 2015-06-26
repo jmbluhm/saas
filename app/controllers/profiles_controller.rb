@@ -4,7 +4,8 @@ class ProfilesController < ApplicationController
     #find which user is logged in
     @user = User.find( params[:user_id]  )
     #prepare form, because we nested profile in routes file
-    @profile = @user.build_profile
+    
+    @profile = Profile.new
   end
     
     def create
