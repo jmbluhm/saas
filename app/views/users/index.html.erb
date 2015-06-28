@@ -5,17 +5,22 @@
           <% if user.profile %>
             <li>
               <div class = "well row <%= cycle('', 'white-bg')%> ">
-                <%= link_to user do %>
+                
                   <div class = "col-sm-4 text-center">
                     <% if user.profile.avatar %>
-                    <%= image_tag user.profile.avatar.url(:thumb), class: 'user-index-avatar'%>
-                    <%end%>
+                      <%= link_to user do %>
+                      <%= image_tag user.profile.avatar.url(:thumb), class: 'user-index-avatar'%>
+                      <%end%>
+                    <%end%> 
                   </div>
                   <div>
+                    <%= link_to user do %>
                     <h2><%= user.profile.first_name %> <%= user.profile.last_name %></h2>
+                    
                     <p><%= user.profile.job_title %></p>
+                    <%end%>
                   </div>
-                <%end%> 
+                
               </div>
             </li>
           <% end %>
