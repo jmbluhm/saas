@@ -15,9 +15,12 @@
                   </div>
                   <div>
                     <%= link_to user do %>
-                    <h2><%= user.profile.first_name %> <%= user.profile.last_name %></h2>
-                    
-                    <p><%= user.profile.job_title %></p>
+                    <h2><%= user.profile.first_name %> <%= user.profile.last_name %></h2>     
+                    <p class = "community-job-title"><%= user.profile.job_title%><span>    </span>
+                      <% if user.plan_id == 2 %>
+                        <span class= "label label-danger">Pro</span>
+                      <%end%>
+                    </p>
                     <%end%>
                   </div>
                 
