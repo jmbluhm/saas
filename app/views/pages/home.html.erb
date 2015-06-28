@@ -2,8 +2,8 @@
 
 
 <div class='jumbotron text-center'>
-  <h1>Welcome to the site!</h1>
-  <h3>A membership site where entrepreneurs can meet developers</h3>
+  <h1>Welcome to the Rad Dudes!</h1>
+  <h3>A membership site all about Certified Rad Dudes.</h3>
 </div>
 <div class = "row">
   <% if user_signed_in? %>
@@ -16,7 +16,7 @@
           <%= link_to "View your profile", user_path(current_user), class: "btn btn-default btn-lg btn-block" %>
         <% else %>
            <h2 class="text-center">Create A Profile</h2>
-           <p class = "text-center">Create a profile to help you connect with other developers, entrepreneurs, and investors!</p>
+           <p class = "text-center">Create a profile to show off how rad you really are!</p>
            <%= link_to "Create your profile", new_user_profile_path(current_user), class: "btn btn-default btn-lg btn-block"  %>
         <% end %>
       </div>
@@ -24,7 +24,7 @@
   <div class="col-md-6">
       <div class="well">
         <h2 class="text-center">The Community</h2>
-        <p class= "text-center"> Visit our community, where you can meet other developers, entrepreneurs, and investors!</p>
+        <p class= "text-center"> This is the official registration site for Rad Dudes. Join in to show how rad you are, and to seek inspiration on how to become even more rad.</p>
         <%= link_to "Visit the community", users_path, class: "btn btn-default btn-lg btn-block" %>
       </div>
   </div>
